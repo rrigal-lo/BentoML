@@ -593,7 +593,7 @@ if python3 -c "import bentoml" &> /dev/null; then
         echo "WARNING: using BentoML version ${existing_bentoml_version}"
     fi
 else
-    pip3 install bentoml=="$BENTOML_VERSION"
+    pip3 install bentoml=="$BENTOML_VERSION" "${PIP_ARGS[@]}"
 fi
 """
             )
